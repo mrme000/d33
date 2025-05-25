@@ -1,0 +1,7 @@
+{
+    "payload_name": "YOUR_PAYLOAD_NAME",
+    "guild_id": "YOUR_GUILD_ID",
+    "bot_token": "YOUR_BOT_TOKEN",
+    "channel_id": "YOUR_CHANNEL_ID",
+    "keylogger_webhook": "YOUR_WEBHOOK_URL"
+}
