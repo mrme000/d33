@@ -51,6 +51,9 @@ if %errorlevel% equ 0 (
     echo - Test in isolated environment
     echo - Use only for authorized testing
     echo - Do not upload to VirusTotal
+    echo.
+    echo Debug mode: d3.exe -d
+    echo - Shows logs and sends debug hit to Discord
 ) else (
     echo ❌ Build failed! Check errors above.
 )

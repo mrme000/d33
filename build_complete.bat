@@ -151,7 +151,7 @@ if %errorlevel% equ 0 (
     echo ===============================================
     echo.
     echo ✅ Executable created: dist\%PAYLOAD_NAME%.exe
-    echo ✅ Size: 
+    echo ✅ Size:
     for %%A in (dist\%PAYLOAD_NAME%.exe) do echo    %%~zA bytes
     echo.
     echo 📋 Configuration Summary:
@@ -175,16 +175,22 @@ if %errorlevel% equ 0 (
     echo   - /persistent - Enable persistence
     echo   - /terminate - Terminate agent
     echo.
+    echo 🐛 Debug Mode Usage:
+    echo   - Run: %PAYLOAD_NAME%.exe -d
+    echo   - Shows terminal logs and sends debug hit to Discord
+    echo   - Bypasses sandbox evasion for testing
+    echo   - Creates debug.log file for troubleshooting
+    echo.
     echo ===============================================
-    
+
     REM Clean up temporary files
     echo [+] Cleaning up temporary files...
     del %PAYLOAD_NAME%.py >nul 2>&1
     del %PAYLOAD_NAME%.spec >nul 2>&1
     if exist "build" rmdir /s /q build >nul 2>&1
-    
+
     echo [+] Cleanup complete!
-    
+
 ) else (
     echo.
     echo ===============================================
